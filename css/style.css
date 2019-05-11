@@ -1180,6 +1180,20 @@ h6 {
   cursor: pointer;
 }
 
+#contact .form .subbtn {
+  background: #007bff;
+  border: 0;
+  border-radius: 20px;
+  padding: 8px 30px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+#contact .form .subbtn:hover {
+  background: #0067d5;
+  cursor: pointer;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
