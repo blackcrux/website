@@ -38,7 +38,7 @@ $(document).ready(function() {
 
       $.ajax({
         type: "POST",
-        url: "https://18.224.72.121:8080/sendmail/v1/html",
+        url: "http://18.224.72.121:8080/sendmail/v1/html",
         data: 
         {
             recipient : "info@blackcrux.com",
