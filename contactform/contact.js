@@ -5,6 +5,13 @@ $(document).ready(function() {
         var subject1 = $('#subject').val()
         var message1 = $('#message').val()
 
+        if (name1 == "" || recipient1 == "" || subject1 == "" || message1 == "") {
+
+            $("#sendmessage").removeClass("show");
+            $("#errormessage").addClass("show");
+            $('#errormessage').html("Please fill the form carefully");
+            return
+       }
         
       $.ajax({
         type: "POST",
@@ -25,7 +32,7 @@ $(document).ready(function() {
         error: function(data) {
             $("#sendmessage").removeClass("show");
             $("#errormessage").addClass("show");
-            $('#errormessage').html(msg);
+            $('#errormessage').html("ERROR!");
         }
       });
 
@@ -41,10 +48,10 @@ $(document).ready(function() {
         },
         cache: false,
         success: function(data){
-           $("#resultarea").text(data);
+           
         },
         error: function(data) {
-            console.log(data)
+           
         }
       });
     })
